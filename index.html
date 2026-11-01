@@ -1,216 +1,677 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <title>Poetry</title>
-  <link rel = "icon" href = "https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png" 
-        type = "image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Sanjh-E-Simrat | Gursimrat Kaur</title>
 
-  <meta property="og:title" content="">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="https://manuscriptslucifer.netlify.app/">
-  <meta property="og:site_name" content="manuscripts">
-  <meta property="og:description" content="blogs, stories, love, action, fiction, perman">
+  <meta name="description" content="Explore the poetry, thoughts and literary creations of Gursimrat Kaur. A world of Punjabi, Hindi and English poetry.">
+  <meta name="theme-color" content="#38234d">
 
-  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+  <meta property="og:title" content="Sanjh-E-Simrat | Gursimrat Kaur">
+  <meta property="og:description" content="A little world of poetry, thoughts and emotions.">
+  <meta property="og:image" content="logo2.jpg">
+  <meta property="og:type" content="website">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" href="https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --purple: #38234d;
+      --deep: #281536;
+      --lavender: #e8d9f1;
+      --light: #f5f0fa;
+      --cream: #fffcf7;
+      --text: #51435b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,252,247,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(56,35,77,.08);
+    }
+
+    .brand {
+      font-family: 'Cinzel', serif;
+      color: var(--purple);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: #b477c7;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 27px;
+      color: var(--purple);
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 140px 20px 80px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 10% 20%, #e9d9f2 0, transparent 35%),
+        radial-gradient(circle at 90% 80%, #e8d9ef 0, transparent 35%),
+        var(--cream);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: #c9a6d9;
+      font-size: 45px;
+      opacity: .5;
+    }
+
+    .hero::before {
+      top: 25%;
+      left: 12%;
+    }
+
+    .hero::after {
+      bottom: 20%;
+      right: 12%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 1;
+      animation: appear 1.2s ease;
+    }
+
+    .hero-img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0 15px 45px rgba(56,35,77,.18);
+      outline: 1px solid #c8a8d6;
+      outline-offset: 8px;
+    }
+
+    .hero-subtitle {
+      margin-top: 35px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: #a46cb7;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      color: var(--purple);
+      font-size: clamp(30px, 5vw, 58px);
+      letter-spacing: 5px;
+      margin: 8px 0;
+    }
+
+    .hero-tagline {
+      color: #9475a5;
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-top: 18px;
+    }
+
+    .hero-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #796782;
+      font-size: 16px;
+      margin: 30px auto;
+      max-width: 550px;
+      line-height: 1.9;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      background: var(--purple);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 40px;
+      margin-top: 12px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: .3s;
+    }
+
+    .explore-btn:hover {
+      background: #805b94;
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px #38234d30;
+    }
+
+    /* COMMON SECTIONS */
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-heading span {
+      color: #ac80bb;
+      font-family: 'Great Vibes', cursive;
+      font-size: 35px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--purple);
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+    .heading-line {
+      width: 65px;
+      height: 2px;
+      background: #c99cda;
+      margin: 18px auto;
+    }
+
+    /* POETRY */
+
+    .poetry-section {
+      background: var(--light);
+    }
+
+    .poetry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .poetry-card {
+      background: white;
+      padding: 40px 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #eadff0;
+      transition: .35s;
+    }
+
+    .poetry-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px #38234d18;
+    }
+
+    .poetry-card i {
+      font-size: 35px;
+      color: #a779ba;
+    }
+
+    .poetry-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--purple);
+      font-size: 20px;
+      margin: 22px 0 12px;
+    }
+
+    .poetry-card p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #85788c;
+      min-height: 48px;
+    }
+
+    .read-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #9567aa;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .read-link:hover {
+      color: var(--purple);
+    }
+
+    /* ABOUT */
+
+    .about-container {
+      display: grid;
+      grid-template-columns: .8fr 1.5fr;
+      align-items: center;
+      gap: 60px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .about-image {
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 160px 160px 20px 20px;
+      object-fit: cover;
+      box-shadow: 15px 15px 0 #e9d9f1;
+    }
+
+    .about-text h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--purple);
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-family: 'Lora', serif;
+      line-height: 2;
+      font-size: 15px;
+      color: #71647a;
+      margin-bottom: 15px;
+    }
+
+    .author-signature {
+      font-family: 'Great Vibes', cursive;
+      color: #a779ba;
+      font-size: 35px;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--deep);
+      color: white;
+      text-align: center;
+      padding: 55px 20px 25px;
+    }
+
+    footer h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      font-weight: 400;
+      color: #e4c9ee;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #c8b8d0;
+      margin: 15px 0;
+    }
+
+    footer a {
+      color: #e4c9ee;
+    }
+
+    .footer-line {
+      width: 60px;
+      height: 1px;
+      background: #a982b8;
+      margin: 25px auto;
+    }
+
+    .copyright {
+      font-size: 11px;
+      color: #a995b5;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: .8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 768px) {
+      .navbar {
+        padding: 17px 6%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 25px;
+        box-shadow: 0 10px 20px #38234d15;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero-img {
+        width: 155px;
+        height: 155px;
+      }
+
+      .hero-subtitle {
+        font-size: 40px;
+      }
+
+      .hero-tagline {
+        letter-spacing: 2px;
+        font-size: 10px;
+      }
+
+      section {
+        padding: 70px 7%;
+      }
+
+      .poetry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header id="header" class="d-flex align-items-center" style="background-color: white;">
-    <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" style="color: navy;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">LYRICAL SIMRAT</a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+  <!-- NAVIGATION -->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li></li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle" style="color: black;"></i>
-      </nav><!-- .navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">SANJH-E-SIMRAT</a>
 
-    </div>
-  </header>
+    <i class="bi bi-list menu-toggle" id="menuToggle"></i>
 
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="poetics.html">PUNJABI</a></li>
+      <li><a href="poetics-eng.html">ENGLISH</a></li>
+      <li><a href="poetics-hin.html">HINDI</a></li>
+      <li><a href="article.html">ARTICLES</a></li>
+    </ul>
+  </nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    
-    <div class="hero-container" style="background-image: url(bgpic.jpg);">
- 
-      <div data-aos="fade-in">
-        <div class="hero-logo">
-          
-          <img src="logo2.jpg" style="width: 25%;border-radius: 45%;"><br><br>
-          <h2 style="color: navy;font-size: 2.5rem;  font-family: Tangerine;
-          font-weight: 1000;
-          font-style: normal;">
-          <b>Simrat's Sonnets</b></h2>
-        </div>
-       
-<h1 style="color: navy;font-size: 2.5rem;">GURSIMRAT KAUR</h1><br>
-<p style="color: navy;font-family: Playwrite US Trad;font-size: 1rem;">Poet | Spiritual Writer | Self Taught Theologian</p>
-<h1>Here, you can find <span class="typed" data-typed-items="amazing stories, heart-touching poems, lovely shayaris"></span></h1>
-    
-      
-    
-      </div>  
-      
-    </div>
-    
-  </section><!-- End Hero -->
+  <!-- HERO -->
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-      <a href="index.html" class="logo mr-auto"><h2 style="color: rgb(231, 170, 231)  ;">GURSIMRAT KAUR</h2></a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+      <img src="logo2.jpg" alt="Sanjh-E-Simrat author emblem" class="hero-img">
 
-     
+      <div class="hero-subtitle">Simrat's Sonnets</div>
 
-    </div>
-  </header><!-- End Header -->
+      <h1>GURSIMRAT KAUR</h1>
 
-  <main id="main">
-
-    
-    <!-- ======= Services Section ======= -->
-    <section id="services">
-      <div class="container">
-        
-
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-         <!-- <div class="col-lg-6 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-book"></i></div>
-            <h4 class="service-title"><a href="storyland.html">Storyland</a></h4>
-            <p class="service-description">Collection of stories and novels written by Lucifer</p>
-          </div>
-        -->
-          <div class="col-lg-6 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-pen"></i></div>
-            <h4 class="service-title"><a href="poetics.html">Verse Casket</a></h4>
-            <p class="service-description">Collection of poems in English and Punjabi</p>
-          </div>
-          
-          
-        </div>
+      <div class="hero-tagline">
+        AUTHOR &nbsp; | &nbsp; EDITOR &nbsp; | &nbsp; SELF-TAUGHT THEOLOGIST
       </div>
-    </section><!-- End Services Section -->
 
-   
+      <p class="hero-quote">
+        "Some feelings cannot be spoken,
+        they find their way into words."
+      </p>
 
-    
+      <a href="#poetry" class="explore-btn">
+        EXPLORE THE WORLD OF WORDS &nbsp; →
+      </a>
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="section-title">About Author</h3>
-            <div class="section-title-divider"></div>
-           
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="profile">
-              <div><img id="luci" src="pro.jpg" width="250px"></div>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-9">
-            <div class="quote">
-              <b><img src="assets/img/quote_sign_left.png" alt=""> GURSIMRAT KAUR </b> 
-              <small><img src="assets/img/quote_sign_right.png" alt=""></small><br>
-              Gursimrat Kaur, born on July 24, 2009, in Chandigarh, is a dedicated student currently attending Shishu Niketan Public School-43 Chandigarh. She is a passionate writer and love reading. Her writing reflects her positive attitude, incorporating themes of humility, calmness, joy, and happiness. As a spiritual writer, she aims to spread positivity through her poems, thoughts, and articles. Gursimrat finds inspiration in listening to Gurbaani, exploring Punjabi literature, and learning Urdu. She hopes to inspire and connect with others through her work, aiming to leave a lasting legacy.
-            </div>
-          </div>
-        </div>
-
-        
-      </div>
-    </section><!-- End Testimonials Section -->
-
-   
-  
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <strong></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-          
-           
-            Designed by <a href="http://atech.amandeepsingh.online" target="_blank">A-TECH</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- POETRY COLLECTION -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <section class="poetry-section" id="poetry">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <div class="section-heading reveal">
+      <span>Words from the heart</span>
+      <h2>Explore The Collections</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="poetry-grid">
+
+      <div class="poetry-card reveal">
+        <i class="bi bi-feather"></i>
+        <h3>Punjabi Poetry</h3>
+        <p>Feel the beauty of Punjabi words, emotions and soulful expressions.</p>
+        <a href="poetics.html" class="read-link">Explore Punjabi →</a>
+      </div>
+
+      <div class="poetry-card reveal">
+        <i class="bi bi-book-half"></i>
+        <h3>English Poetry</h3>
+        <p>A collection of thoughts, feelings and stories expressed through English.</p>
+        <a href="poetics-eng.html" class="read-link">Explore English →</a>
+      </div>
+
+      <div class="poetry-card reveal">
+        <i class="bi bi-journal-richtext"></i>
+        <h3>Hindi Poetry</h3>
+        <p>Discover emotions and imagination through the beauty of Hindi literature.</p>
+        <a href="poetics-hin.html" class="read-link">Explore Hindi →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+
+  <section class="reveal" style="text-align:center;">
+    <div class="section-heading">
+      <span>Beyond poetry</span>
+      <h2>Thoughts & Articles</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <p style="max-width:650px; margin:0 auto 25px; line-height:2; font-family:'Lora',serif;">
+      Every thought has a story, and every story deserves to be told.
+      Explore reflections, ideas and meaningful writings.
+    </p>
+
+    <a href="article.html" class="explore-btn">READ ARTICLES →</a>
+  </section>
+
+  <!-- ABOUT AUTHOR -->
+
+  <section style="background:#f5f0fa;" id="about">
+
+    <div class="section-heading reveal">
+      <span>The person behind the pen</span>
+      <h2>About The Author</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="about-container reveal">
+
+      <div class="about-image">
+        <img src="pro.jpg" alt="Gursimrat Kaur">
+      </div>
+
+      <div class="about-text">
+        <h3>Gursimrat Kaur</h3>
+
+        <p>
+          Gursimrat Kaur, born on July 24, 2009, in Chandigarh,
+          is a dedicated student currently attending Shishu Niketan
+          Public School, Sector 43, Chandigarh.
+        </p>
+
+        <p>
+          A passionate writer and avid reader, her writing reflects
+          humility, calmness, joy and happiness. Through poetry,
+          thoughts and articles, she aims to spread positivity
+          and connect with people.
+        </p>
+
+        <p>
+          Inspired by Gurbaani, Punjabi literature and the beauty
+          of Urdu, she continues to explore the world of words
+          and express the emotions that live within.
+        </p>
+
+        <div class="author-signature">Gursimrat Kaur</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <h2>Sanjh-E-Simrat</h2>
+
+    <p>A little world of poetry, thoughts and emotions.</p>
+
+    <div class="footer-line"></div>
+
+    <p>
+      <a href="poetics.html">Punjabi</a> &nbsp; | &nbsp;
+      <a href="poetics-eng.html">English</a> &nbsp; | &nbsp;
+      <a href="poetics-hin.html">Hindi</a> &nbsp; | &nbsp;
+      <a href="article.html">Articles</a>
+    </p>
+
+    <div class="footer-line"></div>
+
+    <div class="copyright">
+      © 2026 Sanjh-E-Simrat. All Rights Reserved.
+      <br><br>
+      Designed with ♥ by
+      <a href="https://atech.amandeepsinghmajithia.space" target="_blank">A-TECH</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+      menuToggle.classList.toggle('bi-list');
+      menuToggle.classList.toggle('bi-x-lg');
+    });
+
+    // Close menu after clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.add('bi-list');
+        menuToggle.classList.remove('bi-x-lg');
+      });
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
 
 </body>
-
 </html>
