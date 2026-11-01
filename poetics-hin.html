@@ -1,292 +1,803 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Poetry</title>
-  <link rel = "icon" href = "https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png" 
-        type = "image/x-icon">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Hindi Poetry | Simrat's Sonnets</title>
 
-  <meta property="og:title" content="">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="https://manuscriptslucifer.netlify.app/">
-  <meta property="og:site_name" content="manuscripts">
-  <meta property="og:description" content="blogs, stories, love, action, fiction, perman">
+  <meta name="description" content="Read beautiful Hindi poetry and heartfelt writings by Gursimrat Kaur.">
 
-  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" href="assets/img/favicon.png">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
 
+    :root {
+      --plum: #38234D;
+      --deep-plum: #281536;
+      --lavender: #E8D9F1;
+      --soft-lavender: #F5F0FA;
+      --cream: #FFFCF7;
+      --muted: #766b7e;
+      --accent: #B477C7;
+      --white: #ffffff;
+      --shadow: 0 16px 45px rgba(56, 35, 77, .09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--plum);
+      background: var(--cream);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(255, 252, 247, .88);
+      border-bottom: 1px solid rgba(56, 35, 77, .08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-wrap {
+      width: min(1160px, calc(100% - 44px));
+      min-height: 78px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: 'Great Vibes', cursive;
+      color: var(--plum);
+      font-size: 2.15rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--plum);
+      font-size: .88rem;
+      font-weight: 500;
+      transition: color .25s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--plum);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 22px 76px;
+      text-align: center;
+
+      background:
+        radial-gradient(circle at 15% 15%, rgba(180,119,199,.19), transparent 29%),
+        radial-gradient(circle at 88% 78%, rgba(232,217,241,.9), transparent 30%),
+        linear-gradient(135deg, #FFFCF7 0%, #F5F0FA 52%, #FFFCF7 100%);
+    }
+
+    .page-hero::before,
+    .page-hero::after {
+      content: '✦';
+      position: absolute;
+      color: rgba(180,119,199,.45);
+      font-size: 2rem;
+    }
+
+    .page-hero::before {
+      top: 34px;
+      left: 13%;
+    }
+
+    .page-hero::after {
+      right: 14%;
+      bottom: 35px;
+      font-size: 1.4rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: .72rem;
+      font-weight: 600;
+    }
+
+    .page-hero h1 {
+      margin: 0;
+      color: var(--plum);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      font-weight: 600;
+      letter-spacing: .045em;
+    }
+
+    .hero-divider {
+      width: 76px;
+      height: 2px;
+      margin: 20px auto;
+      background: var(--accent);
+    }
+
+    .page-hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.12rem;
+    }
+
+    .hero-quote {
+      margin-top: 18px !important;
+      color: var(--plum) !important;
+      font-family: 'Lora', serif !important;
+      font-style: italic;
+    }
+
+    /* Poetry Section */
+
+    .poetry-section {
+      padding: 76px 22px 88px;
+      background: var(--cream);
+    }
+
+    .section-heading {
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--plum);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 600;
+    }
+
+    .section-heading p {
+      margin: 10px auto 0;
+      color: var(--muted);
+      font-family: 'Noto Serif Devanagari', serif;
+    }
+
+    .poem-grid {
+      width: min(1080px, 100%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .poem-card {
+      position: relative;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 28px;
+      overflow: hidden;
+
+      background: var(--white);
+      border: 1px solid var(--lavender);
+      border-radius: 20px;
+
+      box-shadow: 0 8px 28px rgba(56,35,77,.045);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .poem-card::after {
+      content: '❝';
+      position: absolute;
+      right: 18px;
+      bottom: -38px;
+      color: rgba(180,119,199,.10);
+      font-family: Georgia, serif;
+      font-size: 9rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .poem-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(180,119,199,.65);
+      box-shadow: var(--shadow);
+    }
+
+    .poem-art {
+      width: 112px;
+      height: 112px;
+      flex: 0 0 112px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 17px;
+      background: linear-gradient(145deg, var(--soft-lavender), #fff8f1);
+      border: 1px solid var(--lavender);
+    }
+
+    .poem-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .poem-card:hover .poem-art img {
+      transform: scale(1.07);
+    }
+
+    .poem-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .poem-label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .poem-content h3 {
+      margin: 0 0 15px;
+      color: var(--plum);
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--plum);
+      font-size: .82rem;
+      font-weight: 600;
+      transition: gap .25s ease, color .25s ease;
+    }
+
+    .read-link:hover {
+      gap: 13px;
+      color: var(--accent);
+    }
+
+    /* Feedback Section */
+
+    .feedback-area {
+      padding: 0 22px 78px;
+      text-align: center;
+    }
+
+    .feedback-box {
+      width: min(900px, 100%);
+      margin: auto;
+      padding: 36px 24px;
+      border: 1px solid var(--lavender);
+      border-radius: 20px;
+      background: var(--soft-lavender);
+    }
+
+    .feedback-box h2 {
+      margin: 0 0 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+    }
+
+    .feedback-box p {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    .feedback-btn {
+      display: inline-block;
+      padding: 11px 24px;
+      border-radius: 30px;
+      color: var(--white);
+      background: var(--plum);
+      font-size: .85rem;
+      font-weight: 500;
+      transition: background .25s ease, transform .25s ease;
+    }
+
+    .feedback-btn:hover {
+      color: white;
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 36px 22px 28px;
+      color: rgba(255,255,255,.78);
+      text-align: center;
+      background: var(--deep-plum);
+    }
+
+    .footer-brand {
+      margin: 0 0 8px;
+      color: white;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+    }
+
+    .site-footer p {
+      margin: 4px 0;
+      font-size: .78rem;
+    }
+
+    .site-footer a {
+      color: #d8b5e5;
+    }
+
+    .site-footer a:hover {
+      color: white;
+    }
+
+    /* Scroll Animation */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Design */
+
+    @media (max-width: 760px) {
+
+      .nav-wrap {
+        min-height: 70px;
+        width: min(100% - 32px, 1160px);
+      }
+
+      .brand {
+        font-size: 1.9rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 16px;
+        right: 16px;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        border: 1px solid var(--lavender);
+        border-radius: 16px;
+        background: rgba(255,252,247,.98);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 14px;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 66px 20px 60px;
+      }
+
+      .poetry-section {
+        padding: 58px 18px 68px;
+      }
+
+      .poem-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+      }
+
+      .poem-card {
+        min-height: 170px;
+        padding: 20px;
+        gap: 18px;
+      }
+
+      .poem-art {
+        width: 88px;
+        height: 88px;
+        flex-basis: 88px;
+      }
+
+      .poem-content h3 {
+        font-size: 1.2rem;
+      }
+
+      .feedback-area {
+        padding-bottom: 60px;
+      }
+    }
+
+    @media (max-width: 390px) {
+
+      .poem-card {
+        align-items: flex-start;
+        gap: 13px;
+        padding: 16px;
+      }
+
+      .poem-art {
+        width: 72px;
+        height: 72px;
+        flex-basis: 72px;
+      }
+
+      .poem-content h3 {
+        font-size: 1.08rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
-  <header id="header" class="d-flex align-items-center" style="background-color: white;">
-    <div class="container d-flex align-items-center justify-content-between">
 
-      
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+  <!-- Navigation -->
+  <header class="site-header">
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li></li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle" style="color: black;"></i>
-      </nav><!-- .navbar -->
+    <div class="nav-wrap">
+
+      <a class="brand" href="index.html">
+        Simrat's Sonnets
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="poetics.html">Punjabi</a></li>
+
+        <li><a href="poetics-eng.html">English</a></li>
+
+        <li><a class="active" href="poetics-hin.html">Hindi</a></li>
+
+        <li><a href="article.html">Articles</a></li>
+
+      </ul>
 
     </div>
+
   </header>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    
-    <div class="hero-container">
- 
-      <div data-aos="fade-in">
-        <div class="hero-logo">
-          <img src="logo2.jpg" style="width: 25%;border-radius: 45%;"><br>
-          <h2 style="color: navy;font-size: 2.5srem;  font-family: Tangerine;
-          font-weight: 1000;"><b><i>Simrat's Sonnets</i></b></h2>
-        </div>
-      
-<h1 style="color: navy;font-size: 2.5rem;">GURSIMRAT KAUR</h1><br>
-<p style="color: navy;font-family:Arial, Helvetica, sans-serif;">Poet | Spiritual Writer | Self Taught Theologian</p>
 
-      
-     <h1>Here, you can find <span class="typed" data-typed-items="amazing stories, heart-touching poems, lovely shayaris"></span></h1>
-    
-      </div>
-    </div>
-  </section><!-- End Hero -->
+  <main>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+    <!-- Hero Section -->
+    <section class="page-hero">
 
-      <a href="index.html">Home</a> <a href="poetics.html">Punjabi</a>
-      <a href="poetics-eng.html">English</a> <a href="poetics-hin.html">Hindi</a>
-      <a href="article.html">Article</a> 
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+      <p class="eyebrow">Words from the heart</p>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li>You are in : POETICS</li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      <h1>Hindi Poetry</h1>
 
-    </div>
-  </header><!-- End Header -->
+      <div class="hero-divider"></div>
 
-  <main id="main">
+      <p>
+        कुछ अनकहे एहसास, कुछ अधूरी बातें,
+        जिन्हें शब्दों में पिरोने की एक छोटी-सी कोशिश।
+      </p>
 
-    
-    
+      <p class="hero-quote">
+        “Some feelings are too beautiful to remain unspoken.”
+      </p>
 
-   
+    </section>
 
-    
+    <!-- Poetry Collection -->
+    <section class="poetry-section">
 
-   <!-- ======= Testimonials Section ======= -->
-   <section id="testimonials" class="testimonials section-bg">
-    <div class="container-fluid">
+      <div class="section-heading reveal">
 
-     
+        <p class="eyebrow">The collection</p>
 
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
+        <h2>Poems &amp; Reflections</h2>
 
-          <div class="row">
+        <p>
+          हर कविता में एक एहसास, हर एहसास में एक कहानी।
+        </p>
 
-           <!-- End testimonial-item -->
-
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4 mt-lg-0">
-                <a href="hin1.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>हम उसके वो हमारा</h3>
-                <h4></h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            
-            <!-- End testimonial-item -->
-
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4 mt-lg-0">
-                <a href="hin2.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>लैंगिक संवेदनशीलता</h3>
-                <h4></h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4 mt-lg-0">
-                <a href="hin3.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>तुम्हारी बातें</h3>
-                <h4></h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-
-
-            <!--
-              <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="https://luciferkhusrao.blogspot.com/2022/05/beautiful-wish-of-ghost.html"><img src="assets/img/testimonials/p3.jpg" class="testimonial-img" alt=""></a>
-                <h3>Beautiful Wish of A Ghost</h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Feel the heart of a lovelorn ghost who's want for pure love wasn't listened while he was alive. Ainsi-bas-la-vida (because such low is life).
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-          -->
-       <!--   <div class="col-lg-6">
-            <div class="testimonial-item mt-4 mt-lg-0">
-              <a href="poem3.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-              <h3>ਪ੍ਰੇਮ ਓਹੀ</h3>
-              <h4></h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-               
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
-        -->
-            <!-- End testimonial-item -->
-          
-           <!-- <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="https://luciferkhusrao.blogspot.com/2022/11/the-ruler-of-world-ocean.html"><img src="assets/img/testimonials/p4.jpg" class="testimonial-img" alt=""></a>
-                <h3>Ruler of the World Ocean</h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Never torture a soul so much that it breaks all levels of humbleness and turns into a devil's incarnate. Find out the harsh backgrounds, struggles and victories of the world's cruelest warrior.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>--><!-- End testimonial-item -->
-
-           
-
-           
-
-           <!--
-
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="poem4.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>ਨਾਨਕ ਜੀਓ</h3>
-                <h4></h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-          -->
-            <!-- End testimonial-item -->
-
-          </div>
-        </div>
       </div>
 
-    </div>
-  </section><!-- End Testimonials Section -->
+      <div class="poem-grid">
 
-   
-  
+        <!-- Hindi Poem 1 -->
+        <article class="poem-card reveal">
 
-  </main><!-- End #main -->
-  <a href="feedback.html" style="margin-left: 15%;font-size: 1.3rem;margin-top: 10%">GIVE YOUR FEEDBACK HERE....</a>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <strong></strong>. All Rights Reserved
+          <a class="poem-art" href="hin1.html"
+             aria-label="Read हम उसके वो हमारा">
+
+            <img src="logo.png" alt="Simrat's Sonnets artwork">
+
+          </a>
+
+          <div class="poem-content">
+
+            <span class="poem-label">Hindi poem</span>
+
+            <h3>हम उसके वो हमारा</h3>
+
+            <a class="read-link" href="hin1.html">
+              Read poem <i class="bi bi-arrow-up-right"></i>
+            </a>
+
           </div>
-          <div class="credits">
-          
-            
-            Designed by <a href="http://atech.amandeepsingh.online" target="_blank">A-TECH</a>
+
+        </article>
+
+        <!-- Hindi Poem 2 -->
+        <article class="poem-card reveal">
+
+          <a class="poem-art" href="hin2.html"
+             aria-label="Read लैंगिक संवेदनशीलता">
+
+            <img src="logo.png" alt="Simrat's Sonnets artwork">
+
+          </a>
+
+          <div class="poem-content">
+
+            <span class="poem-label">Hindi poem</span>
+
+            <h3>लैंगिक संवेदनशीलता</h3>
+
+            <a class="read-link" href="hin2.html">
+              Read poem <i class="bi bi-arrow-up-right"></i>
+            </a>
+
           </div>
-        </div>
+
+        </article>
+
+        <!-- Hindi Poem 3 -->
+        <article class="poem-card reveal">
+
+          <a class="poem-art" href="hin3.html"
+             aria-label="Read तुम्हारी बातें">
+
+            <img src="logo.png" alt="Simrat's Sonnets artwork">
+
+          </a>
+
+          <div class="poem-content">
+
+            <span class="poem-label">Hindi poem</span>
+
+            <h3>तुम्हारी बातें</h3>
+
+            <a class="read-link" href="hin3.html">
+              Read poem <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
-    </div>
-  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Feedback Section -->
+    <section class="feedback-area">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+      <div class="feedback-box reveal">
+
+        <p class="eyebrow">Your thoughts matter</p>
+
+        <h2>Share Your Feedback</h2>
+
+        <p>
+          Your words and suggestions help this little poetry space grow.
+        </p>
+
+        <a class="feedback-btn" href="feedback.html">
+          Give Feedback <i class="bi bi-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+
+    <h2 class="footer-brand">Simrat's Sonnets</h2>
+
+    <p>Poetry born from feelings, faith and imagination.</p>
+
+    <p>
+      &copy; <span id="year"></span> Simrat's Sonnets.
+      All rights reserved.
+    </p>
+
+    <p>
+      Designed with care by
+      <a href="https://atech.amandeepsingh.online"
+         target="_blank" rel="noopener">A-TECH</a>
+    </p>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+
+    // Mobile Navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+
+      const isOpen = navLinks.classList.toggle('open');
+
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+
+      menuToggle.innerHTML = isOpen
+        ? '<i class="bi bi-x-lg"></i>'
+        : '<i class="bi bi-list"></i>';
+
+    });
+
+    // Close mobile menu after clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        navLinks.classList.remove('open');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+
+        menuToggle.innerHTML = '<i class="bi bi-list"></i>';
+
+      });
+
+    });
+
+    // Dynamic Copyright Year
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+    // Scroll Reveal Animation
+    const revealObserver = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add('visible');
+
+          revealObserver.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(item => {
+      revealObserver.observe(item);
+    });
+
+  </script>
 
 </body>
-
 </html>

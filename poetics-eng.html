@@ -1,264 +1,722 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Poetry</title>
-  <link rel = "icon" href = "https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png" 
-        type = "image/x-icon">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>English Poetry | Simrat's Sonnets</title>
+  <meta name="description" content="Explore heartfelt English poems by Gursimrat Kaur at Simrat's Sonnets.">
+  <meta name="theme-color" content="#38234D">
 
-  <meta property="og:title" content="">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="https://manuscriptslucifer.netlify.app/">
-  <meta property="og:site_name" content="manuscripts">
-  <meta property="og:description" content="blogs, stories, love, action, fiction, perman">
+  <link rel="icon" href="https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png">
 
-  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FFFCF7;
+      --plum: #38234D;
+      --deep-plum: #281536;
+      --lavender: #E8D9F1;
+      --soft-lavender: #F5F0FA;
+      --purple: #B477C7;
+      --text: #51445A;
+      --white: #FFFFFF;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 252, 247, 0.94);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 3px 20px rgba(56, 35, 77, 0.08);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-family: 'Great Vibes', cursive;
+      color: var(--plum);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--plum);
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--purple);
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: var(--purple);
+      left: 0;
+      bottom: -7px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 27px;
+      color: var(--plum);
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 570px;
+      padding: 65px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(232, 217, 241, 0.9), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(180, 119, 199, 0.18), transparent 35%),
+        linear-gradient(135deg, #F5F0FA, #FFFCF7);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero-logo {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 10px 35px rgba(56, 35, 77, 0.15);
+      margin-bottom: 15px;
+    }
+
+    .hero-brand {
+      font-family: 'Great Vibes', cursive;
+      color: var(--plum);
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      color: var(--plum);
+      font-size: 37px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      color: #756184;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 35px;
+    }
+
+    .hero-description {
+      font-family: 'Lora', serif;
+      font-size: 25px;
+      line-height: 1.7;
+      color: var(--plum);
+    }
+
+    .hero-description span {
+      color: #A36CB5;
+      font-style: italic;
+    }
+
+    .hero-line {
+      width: 75px;
+      height: 3px;
+      background: var(--purple);
+      margin: 22px auto;
+      border-radius: 5px;
+    }
+
+    /* Poetry Section */
+    .poetry-section {
+      padding: 85px 20px 95px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-heading .small-heading {
+      color: var(--purple);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: 600;
+    }
+
+    .section-heading h2 {
+      color: var(--plum);
+      font-family: 'Cinzel', serif;
+      font-size: 32px;
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #887A91;
+    }
+
+    .poetry-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .poem-card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      text-align: center;
+      padding: 30px 24px 32px;
+      border: 1px solid #EFE5F3;
+      box-shadow: 0 8px 30px rgba(56, 35, 77, 0.06);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .poem-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(56, 35, 77, 0.13);
+      border-color: var(--lavender);
+    }
+
+    .poem-image-link {
+      display: inline-block;
+      margin-bottom: 23px;
+    }
+
+    .poem-image {
+      width: 125px;
+      height: 125px;
+      object-fit: cover;
+      border-radius: 50%;
+      padding: 6px;
+      background: var(--soft-lavender);
+      border: 2px solid var(--lavender);
+      transition: 0.4s;
+    }
+
+    .poem-card:hover .poem-image {
+      transform: scale(1.06) rotate(4deg);
+      border-color: var(--purple);
+    }
+
+    .poem-number {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--purple);
+      margin-bottom: 10px;
+    }
+
+    .poem-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 12px;
+    }
+
+    .poem-type {
+      display: inline-block;
+      background: var(--soft-lavender);
+      color: #88649A;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .read-poem {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 23px;
+      color: var(--plum);
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .read-poem:hover {
+      color: var(--purple);
+      gap: 13px;
+    }
+
+    /* Feedback */
+    .feedback-section {
+      padding: 65px 20px;
+      background: var(--soft-lavender);
+      text-align: center;
+    }
+
+    .feedback-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 27px;
+      color: var(--plum);
+      margin-bottom: 12px;
+    }
+
+    .feedback-section p {
+      font-family: 'Lora', serif;
+      color: #756184;
+      margin-bottom: 25px;
+    }
+
+    .feedback-btn {
+      display: inline-block;
+      padding: 13px 30px;
+      border-radius: 30px;
+      color: white;
+      background: var(--plum);
+      font-size: 13px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .feedback-btn:hover {
+      background: var(--purple);
+      transform: translateY(-3px);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--deep-plum);
+      color: #E8D9F1;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    .footer-brand {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #CBB9D6;
+      margin: 7px 0;
+    }
+
+    footer a {
+      color: #D9B4E8;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .back-top {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background: var(--plum);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 21px;
+      box-shadow: 0 5px 15px rgba(56, 35, 77, 0.2);
+      z-index: 500;
+      transition: 0.3s;
+    }
+
+    .back-top:hover {
+      background: var(--purple);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 13px 20px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--cream);
+        flex-direction: column;
+        gap: 23px;
+        box-shadow: 0 10px 20px rgba(56, 35, 77, 0.08);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 55px 18px;
+      }
+
+      .hero-logo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .hero-brand {
+        font-size: 39px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+        letter-spacing: 2px;
+      }
+
+      .hero-description {
+        font-size: 20px;
+      }
+
+      .poetry-section {
+        padding: 65px 18px;
+      }
+
+      .poetry-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 22px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1000px) {
+      .poetry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header id="header" class="d-flex align-items-center" style="background-color: white;">
-    <div class="container d-flex align-items-center justify-content-between">
 
-      
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li></li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle" style="color: black;"></i>
-      </nav><!-- .navbar -->
+      <a href="index.html" class="brand">Simrat's Sonnets</a>
 
-    </div>
-  </header>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    
-    <div class="hero-container">
- 
-      <div data-aos="fade-in">
-        <div class="hero-logo">
-          <img src="logo2.jpg" style="width: 25%;border-radius: 45%;"><br>
-          <h2 style="color: navy;font-size: 2.5srem;  font-family: Tangerine;
-          font-weight: 1000;"><b><i>Simrat's Sonnets</i></b></h2>
-        </div>
-       
-<h1 style="color: navy;font-size: 2.5rem;">GURSIMRAT KAUR</h1><br>
-<p style="color: navy;font-family:Arial, Helvetica, sans-serif;">Poet | Spiritual Writer | Self Taught Theologian</p>
-
-      
-     <h1>Here, you can find <span class="typed" data-typed-items="amazing stories, heart-touching poems, lovely shayaris"></span></h1>
-    
-      </div>
-    </div>
-  </section><!-- End Hero -->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html">Home</a> <a href="poetics.html">Punjabi</a>
-      <a href="poetics-eng.html">English</a> <a href="poetics-hin.html">Hindi</a>
-      <a href="article.html">Article</a> 
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li>You are in : POETICS</li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    
-    
-
-   
-
-    
-
-   <!-- ======= Testimonials Section ======= -->
-   <section id="testimonials" class="testimonials section-bg">
-    <div class="container-fluid">
-
-     
-
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-
-          <div class="row">
-
-           <!-- End testimonial-item -->
-
-            
-            
-            <!-- End testimonial-item -->
-
-           
-            <!--
-              <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="https://luciferkhusrao.blogspot.com/2022/05/beautiful-wish-of-ghost.html"><img src="assets/img/testimonials/p3.jpg" class="testimonial-img" alt=""></a>
-                <h3>Beautiful Wish of A Ghost</h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Feel the heart of a lovelorn ghost who's want for pure love wasn't listened while he was alive. Ainsi-bas-la-vida (because such low is life).
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-          -->
-            <!-- End testimonial-item -->
-          
-           <!-- <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="https://luciferkhusrao.blogspot.com/2022/11/the-ruler-of-world-ocean.html"><img src="assets/img/testimonials/p4.jpg" class="testimonial-img" alt=""></a>
-                <h3>Ruler of the World Ocean</h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Never torture a soul so much that it breaks all levels of humbleness and turns into a devil's incarnate. Find out the harsh backgrounds, struggles and victories of the world's cruelest warrior.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>--><!-- End testimonial-item -->
-
-           
-
-           
-
-           
-
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="eng/poem1.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>Never Forgotten </h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-l  eft quote-icon-left"></i>
-                    
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial-item -->
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="eng/poem2.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>Heart to Heart, Soul to Soul </h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-l  eft quote-icon-left"></i>
-                    
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!--End-->
-            
-            <div class="col-lg-6">
-              <div class="testimonial-item mt-4">
-                <a href="eng/poem3.html"><img src="logo.png" class="testimonial-img" alt=""></a>
-                <h3>Echoes Of Love </h3>
-                <h4>Poem</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-l  eft quote-icon-left"></i>
-                    
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
+      <div class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="bi bi-list"></i>
       </div>
 
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="poetics.html">Punjabi</a></li>
+        <li><a href="poetics-eng.html" class="active">English</a></li>
+        <li><a href="poetics-hin.html">Hindi</a></li>
+        <li><a href="article.html">Articles</a></li>
+      </ul>
+
     </div>
-  </section><!-- End Testimonials Section -->
+  </nav>
 
-   
-  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
 
-  </main><!-- End #main -->
-  <a href="feedback.html" style="margin-left: 15%;font-size: 1.3rem;margin-top: 10%">GIVE YOUR FEEDBACK HERE....</a>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <strong></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-          
-            
-            Designed by <a href="http://atech.amandeepsingh.online" target="_blank">A-TECH</a>
-          </div>
-        </div>
+      <img src="logo2.jpg" alt="Simrat's Sonnets Logo" class="hero-logo">
+
+      <div class="hero-brand">Simrat's Sonnets</div>
+
+      <h1>GURSIMRAT KAUR</h1>
+
+      <p class="hero-subtitle">
+        Poet | Spiritual Writer | Self-Taught Theologian
+      </p>
+
+      <div class="hero-line"></div>
+
+      <p class="hero-description">
+        Here, words become emotions and emotions become poetry.
+        <br>
+        <span>Explore stories, heart-touching poems and lovely shayaris.</span>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Poetry Section -->
+  <main>
+
+    <section class="poetry-section">
+
+      <div class="section-heading reveal">
+        <span class="small-heading">A Collection of Emotions</span>
+        <h2>English Poetry</h2>
+        <p>Every poem carries a feeling, every feeling tells a story.</p>
       </div>
-    </div>
-  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div class="poetry-grid">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+        <!-- Poem 1 -->
+        <article class="poem-card reveal">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+          <a href="eng/poem1.html" class="poem-image-link">
+            <img src="logo.png" alt="Never Forgotten" class="poem-image">
+          </a>
+
+          <span class="poem-number">POEM 01</span>
+
+          <h3>Never Forgotten</h3>
+
+          <span class="poem-type">Poem</span>
+
+          <a href="eng/poem1.html" class="read-poem">
+            Read Poem <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Poem 2 -->
+        <article class="poem-card reveal">
+
+          <a href="eng/poem2.html" class="poem-image-link">
+            <img src="logo.png" alt="Heart to Heart, Soul to Soul" class="poem-image">
+          </a>
+
+          <span class="poem-number">POEM 02</span>
+
+          <h3>Heart to Heart, Soul to Soul</h3>
+
+          <span class="poem-type">Poem</span>
+
+          <a href="eng/poem2.html" class="read-poem">
+            Read Poem <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Poem 3 -->
+        <article class="poem-card reveal">
+
+          <a href="eng/poem3.html" class="poem-image-link">
+            <img src="logo.png" alt="Echoes Of Love" class="poem-image">
+          </a>
+
+          <span class="poem-number">POEM 03</span>
+
+          <h3>Echoes Of Love</h3>
+
+          <span class="poem-type">Poem</span>
+
+          <a href="eng/poem3.html" class="read-poem">
+            Read Poem <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Feedback -->
+    <section class="feedback-section">
+
+      <h2>Share Your Thoughts</h2>
+
+      <p>Your words and feedback make this journey more meaningful.</p>
+
+      <a href="feedback.html" class="feedback-btn">
+        Give Your Feedback <i class="bi bi-heart"></i>
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="footer-brand">Simrat's Sonnets</div>
+
+    <p>
+      A little world of words, emotions and beautiful thoughts.
+    </p>
+
+    <p>
+      &copy; <span id="year"></span> Simrat's Sonnets. All Rights Reserved.
+    </p>
+
+    <p>
+      Designed with care by
+      <a href="https://atech.amandeepsingh.online" target="_blank" rel="noopener noreferrer">A-TECH</a>
+    </p>
+
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <script>
+    // Mobile Navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+
+      const isOpen = navLinks.classList.contains("show");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.innerHTML = isOpen
+        ? '<i class="bi bi-x-lg"></i>'
+        : '<i class="bi bi-list"></i>';
+    });
+
+    // Close mobile menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="bi bi-list"></i>';
+      });
+    });
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(function (element) {
+        observer.observe(element);
+      });
+    } else {
+      revealElements.forEach(function (element) {
+        element.classList.add("visible");
+      });
+    }
+  </script>
 
 </body>
-
 </html>

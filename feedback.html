@@ -1,480 +1,739 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <title>Poetry</title>
-  <link rel = "icon" href = "https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png" 
-        type = "image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Feedback | Simrat's Sonnets</title>
+  <meta name="description" content="Share your thoughts and feedback with Simrat's Sonnets.">
 
-  <meta property="og:title" content="">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="https://manuscriptslucifer.netlify.app/">
-  <meta property="og:site_name" content="manuscripts">
-  <meta property="og:description" content="blogs, stories, love, action, fiction, perman">
+  <meta name="theme-color" content="#38234D">
 
-  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+  <link rel="icon" href="https://i.pinimg.com/originals/25/29/c6/2529c62e987d4b7c11553ea92c3cc66e.png">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 
   <style>
-    *, *:before, *:after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    :root {
+      --cream: #FFFCF7;
+      --plum: #38234D;
+      --deep-plum: #281536;
+      --lavender: #E8D9F1;
+      --soft-lavender: #F5F0FA;
+      --purple: #B477C7;
+      --text: #51445A;
+      --white: #FFFFFF;
+    }
 
-body {
-  background: white;
-  font-size: 12px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body, button, input {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.background {
-  display: flex;
-  min-height: 100vh;
-}
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
 
-.container {
-  flex: 0 1 700px;
-  margin: auto;
-  padding: 10px;
-}
+    a {
+      text-decoration: none;
+    }
 
-.screen {
-  position: relative;
-  background: #3e3e3e;
-  border-radius: 15px;
-}
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 252, 247, 0.94);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 3px 20px rgba(56, 35, 77, 0.08);
+    }
 
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-  z-index: -1;
-}
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.screen-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #4d4d4f;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
+    .brand {
+      font-family: 'Great Vibes', cursive;
+      color: var(--plum);
+      font-size: 32px;
+      font-weight: bold;
+    }
 
-.screen-header-left {
-  margin-right: auto;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
 
-.screen-header-button {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-radius: 8px;
-  background: white;
-}
+    .nav-links a {
+      color: var(--plum);
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+    }
 
-.screen-header-button.close {
-  background: #ed1c6f;
-}
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--purple);
+    }
 
-.screen-header-button.maximize {
-  background: #e8e925;
-}
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: var(--purple);
+      left: 0;
+      bottom: -7px;
+    }
 
-.screen-header-button.minimize {
-  background: #74c54f;
-}
+    .menu-toggle {
+      display: none;
+      font-size: 27px;
+      color: var(--plum);
+      cursor: pointer;
+    }
 
-.screen-header-right {
-  display: flex;
-}
+    /* Hero */
+    .hero {
+      min-height: 390px;
+      padding: 65px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(232, 217, 241, 0.9), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(180, 119, 199, 0.18), transparent 35%),
+        linear-gradient(135deg, #F5F0FA, #FFFCF7);
+    }
 
-.screen-header-ellipsis {
-  width: 3px;
-  height: 3px;
-  margin-left: 2px;
-  border-radius: 8px;
-  background: #999;
-}
+    .hero-content {
+      max-width: 850px;
+      animation: fadeUp 1s ease;
+    }
 
-.screen-body {
-  display: flex;
-}
+    .hero-logo {
+      width: 115px;
+      height: 115px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 10px 35px rgba(56, 35, 77, 0.15);
+      margin-bottom: 12px;
+    }
 
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
+    .hero-brand {
+      font-family: 'Great Vibes', cursive;
+      color: var(--plum);
+      font-size: 43px;
+      margin-bottom: 10px;
+    }
 
-.screen-body-item.left {
-  display: flex;
-  flex-direction: column;
-}
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      color: var(--plum);
+      font-size: 31px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
 
-.app-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: #ea1d6f;
-  font-size: 26px;
-}
+    .hero-subtitle {
+      color: #756184;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
 
-.app-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #ea1d6f;
-}
+    .hero-line {
+      width: 70px;
+      height: 3px;
+      background: var(--purple);
+      margin: 22px auto;
+      border-radius: 5px;
+    }
 
-.app-contact {
-  margin-top: auto;
-  font-size: 8px;
-  color: #888;
-}
+    .hero-description {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      color: var(--plum);
+      font-style: italic;
+    }
 
-.app-form-group {
-  margin-bottom: 15px;
-}
+    /* Contact Section */
+    .contact-section {
+      padding: 85px 20px 100px;
+      background: var(--cream);
+    }
 
-.app-form-group.message {
-  margin-top: 40px;
-}
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
-}
+    .small-heading {
+      color: var(--purple);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: 600;
+    }
 
-.app-form-control {
-  width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color .2s;
-}
+    .section-heading h2 {
+      color: var(--plum);
+      font-family: 'Cinzel', serif;
+      font-size: 32px;
+      margin: 12px 0;
+    }
 
-.app-form-control::placeholder {
-  color: #666;
-}
+    .section-heading p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #887A91;
+      line-height: 1.8;
+    }
 
-.app-form-control:focus {
-  border-bottom-color: #ddd;
-}
+    .contact-wrapper {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.85fr 1.5fr;
+      border-radius: 22px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 15px 45px rgba(56, 35, 77, 0.09);
+      border: 1px solid #EFE5F3;
+    }
 
-.app-form-button {
-  background: none;
-  border: none;
-  color: #ea1d6f;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-}
+    /* Left Information Panel */
+    .contact-info {
+      background: linear-gradient(150deg, var(--plum), var(--deep-plum));
+      color: white;
+      padding: 55px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.app-form-button:hover {
-  color: #b9134f;
-}
+    .contact-info h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 23px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-.credits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
+    .contact-info p {
+      color: #D9C9E3;
+      font-size: 13px;
+      line-height: 1.9;
+    }
 
-.credits-link {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
+    .info-icon {
+      font-size: 42px;
+      color: #D9B4E8;
+      margin-bottom: 25px;
+    }
 
-.dribbble {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
+    .contact-note {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #E8D9F1 !important;
+      margin-top: 35px;
+    }
 
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
-  }
+    /* Form */
+    .contact-form {
+      padding: 50px;
+    }
 
-  .screen-body-item.left {
-    margin-bottom: 30px;
-  }
+    .form-title {
+      font-family: 'Cinzel', serif;
+      color: var(--plum);
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
 
-  .app-title {
-    flex-direction: row;
-  }
+    .form-description {
+      color: #887A91;
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
 
-  .app-title span {
-    margin-right: 12px;
-  }
+    .form-group {
+      margin-bottom: 24px;
+    }
 
-  .app-title:after {
-    display: none;
-  }
-}
+    .form-group label {
+      display: block;
+      color: var(--plum);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 9px;
+      letter-spacing: 0.5px;
+    }
 
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #E7DDED;
+      border-radius: 10px;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--plum);
+      background: #FFFCFF;
+      transition: 0.3s;
+    }
 
-  .screen-body-item {
-    padding: 0;
-  }
-}
+    .form-control::placeholder {
+      color: #B2A5BA;
+    }
 
+    .form-control:focus {
+      border-color: var(--purple);
+      box-shadow: 0 0 0 3px rgba(180, 119, 199, 0.12);
+    }
+
+    textarea.form-control {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      color: white;
+      background: var(--plum);
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: var(--purple);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(56, 35, 77, 0.15);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--deep-plum);
+      color: #E8D9F1;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    .footer-brand {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #CBB9D6;
+      margin: 7px 0;
+    }
+
+    footer a {
+      color: #D9B4E8;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Back to Top */
+    .back-top {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background: var(--plum);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 21px;
+      box-shadow: 0 5px 15px rgba(56, 35, 77, 0.2);
+      z-index: 500;
+      transition: 0.3s;
+    }
+
+    .back-top:hover {
+      background: var(--purple);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 13px 20px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--cream);
+        flex-direction: column;
+        gap: 23px;
+        box-shadow: 0 10px 20px rgba(56, 35, 77, 0.08);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 350px;
+        padding: 50px 18px;
+      }
+
+      .hero-logo {
+        width: 95px;
+        height: 95px;
+      }
+
+      .hero-brand {
+        font-size: 37px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .contact-section {
+        padding: 60px 16px;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        padding: 35px 28px;
+      }
+
+      .contact-note {
+        margin-top: 20px;
+      }
+
+      .contact-form {
+        padding: 32px 23px;
+      }
+
+      .section-heading h2 {
+        font-size: 26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ======= Hero Section ======= -->
-  
-  <header id="header" class="d-flex align-items-center" style="background-color: white;">
-    <div class="container d-flex align-items-center justify-content-between">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
 
-      
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
+      <a href="index.html" class="brand">Simrat's Sonnets</a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li></li>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="poetics.html">Punjabi</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-eng.html">English</a></li>
-          <li><a class="nav-link scrollto active" href="poetics-hin.html">Hindi</a></li>
-          <li><a class="nav-link scrollto active" href="article.html">Article</a></li>
-        <!-- <li><a class="nav-link scrollto" href="storyland.html">Storyland</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle" style="color: black;"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header>
-
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    
-    <div class="hero-container">
- 
-      <div data-aos="fade-in">
-        <div class="hero-logo">
-          <img src="logo2.jpg" style="width: 25%;border-radius: 45%;"><br>
-          <h2 style="color: navy;font-size: 2.5srem;  font-family: Tangerine;
-          font-weight: 1000;"><b><i>Simrat's Sonnets</i></b></h2> 
-        </div>
-     
-<h1 style="color: navy;font-size: 2.5rem;">GURSIMRAT KAUR</h1><br>
-<p style="color: navy;font-family:Arial, Helvetica, sans-serif;">Poet | Spiritual Writer | Self Taught Theologian</p>
-
-      
-     <h1>Here, you can find <span class="typed" data-typed-items="amazing stories, heart-touching poems, lovely shayaris"></span></h1>
-    
+      <div class="menu-toggle" id="menuToggle"
+           aria-label="Open navigation" aria-expanded="false">
+        <i class="bi bi-list"></i>
       </div>
-    </div>
-  </section><!-- End Hero --><!-- End Hero -->
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-        <a href="index.html">Home</a> <a href="poetics.html">Punjabi</a>
-     <a href="poetics-eng.html">English</a> <a href="poetics-hin.html">Hindi</a>
-     <a href="article.html">Article</a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Manuscripts</a></h1> -->
-
-     
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="poetics.html">Punjabi</a></li>
+        <li><a href="poetics-eng.html">English</a></li>
+        <li><a href="poetics-hin.html">Hindi</a></li>
+        <li><a href="article.html">Articles</a></li>
+      </ul>
 
     </div>
-  </header><!-- End Header -->
+  </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
 
-  <div class="background">
-    <div class="container">
-      <div class="screen">
-        <div class="screen-header">
-          <div class="screen-header-left">
-            <div class="screen-header-button close"></div>
-            <div class="screen-header-button maximize"></div>
-            <div class="screen-header-button minimize"></div>
-          </div>
-          <div class="screen-header-right">
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-          </div>
-        </div>
-        <div class="screen-body">
-          <div class="screen-body-item left">
-            <div class="app-title">
-              <span>FEEDBACK</span>
-              <span></span>
+      <img src="logo2.jpg" alt="Simrat's Sonnets Logo" class="hero-logo">
+
+      <div class="hero-brand">Simrat's Sonnets</div>
+
+      <h1>GURSIMRAT KAUR</h1>
+
+      <p class="hero-subtitle">
+        Poet | Spiritual Writer | Self-Taught Theologian
+      </p>
+
+      <div class="hero-line"></div>
+
+      <p class="hero-description">
+        Every thought matters. Every voice deserves to be heard.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <main>
+
+    <section class="contact-section">
+
+      <div class="section-heading">
+
+        <span class="small-heading">We Would Love to Hear From You</span>
+
+        <h2>Share Your Feedback</h2>
+
+        <p>
+          Your thoughts, suggestions and appreciation mean a lot.
+          <br>
+          Leave a message and be a part of this beautiful journey.
+        </p>
+
+      </div>
+
+      <div class="contact-wrapper">
+
+        <!-- Left Panel -->
+        <div class="contact-info">
+
+          <div>
+            <div class="info-icon">
+              <i class="bi bi-envelope-heart"></i>
             </div>
-            <div class="app-contact"></div>
+
+            <h3>Let's Connect Through Words</h3>
+
+            <p>
+              Whether a poem touched your heart, an article inspired you,
+              or you simply want to share your thoughts, this space is yours.
+            </p>
           </div>
-          <div class="screen-body-item">
-            <form class="app-form" action="https://api.web3forms.com/submit" method="POST">
-              <div class="app-form-group">
-                <input type="hidden" name="access_key" value="722b4a37-5aab-4900-855e-c59216deeda4">
-                <input name="name" class="app-form-control" placeholder="NAME" required>
-              </div>
-              <div class="app-form-group">
-                <input name="email" class="app-form-control" placeholder="EMAIL">
-              </div>
-             
-              <div class="app-form-group message">
-                <input name="message" class="app-form-control" placeholder="MESSAGE">
-              </div>
-              <div class="app-form-group buttons">
-               
-                <button type="submit" class="app-form-button">SEND</button>
-              </div>
+
+          <p class="contact-note">
+            "Words have the power to connect hearts."
+          </p>
+
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="contact-form">
+
+          <h3 class="form-title">Send a Message</h3>
+
+          <p class="form-description">
+            Fill in the details below to share your feedback.
+          </p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key"
+              value="722b4a37-5aab-4900-855e-c59216deeda4">
+
+            <input type="hidden" name="subject"
+              value="New Feedback - Simrat's Sonnets">
+
+            <input type="hidden" name="from_name"
+              value="Simrat's Sonnets Website">
+
+            <div class="form-group">
+
+              <label for="name">Your Name</label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              >
+
             </div>
-            
-          </div>
+
+            <div class="form-group">
+
+              <label for="email">Email Address</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter your email address"
+                autocomplete="email"
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="message">Your Message</label>
+
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                placeholder="Write your feedback here..."
+                required
+              ></textarea>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Send Feedback <i class="bi bi-send"></i>
+            </button>
+
+          </form>
+
         </div>
+
       </div>
-      <div class="credits">
-    </form>
-  
-      </div>
-    </div>
-  </div>
-  
 
+    </section>
 
-  <main id="main">
+  </main>
 
-    
-    <!-- ======= Services Section ======= -->
-    <section id="services">
-      <div class="container">
-        
+  <!-- Footer -->
+  <footer>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-         <!-- <div class="col-lg-6 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-book"></i></div>
-            <h4 class="service-title"><a href="storyland.html">Storyland</a></h4>
-            <p class="service-description">Collection of stories and novels written by Lucifer</p>
-          </div>
-        -->
+    <div class="footer-brand">Simrat's Sonnets</div>
 
+    <p>
+      A little world of words, emotions and beautiful thoughts.
+    </p>
 
+    <p>
+      &copy; <span id="year"></span> Simrat's Sonnets. All Rights Reserved.
+    </p>
 
-          <div class="col-lg-6 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-pen"></i></div>
-            <h4 class="service-title"><a href="poetics.html">POETICS</a></h4>
-            <p class="service-description">Collection of poems in English and Punjabi </p>
-          </div>
-          
-          
-        </div>
-      </div>
-    </section><!-- End Services Section -->
+    <p>
+      Designed with care by
+      <a href="https://atech.amandeepsingh.online"
+         target="_blank" rel="noopener noreferrer">A-TECH</a>
+    </p>
 
-   
+  </footer>
 
-    
+  <!-- Back to Top -->
+  <a href="#" class="back-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
-    
+  <script>
+    // Mobile Navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
-   
-  
+    menuToggle.addEventListener("click", function () {
 
-  </main><!-- End #main -->
+      navLinks.classList.toggle("show");
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <strong>G.S. Poetry</strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-          
-           
-            Designed by <a href="https://www.github.com/Ammyasl2003" target="_blank">A-TECH</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+      const isOpen = navLinks.classList.contains("show");
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      menuToggle.setAttribute("aria-expanded", isOpen);
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+      menuToggle.innerHTML = isOpen
+        ? '<i class="bi bi-x-lg"></i>'
+        : '<i class="bi bi-list"></i>';
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    });
+
+    // Close menu after selecting a page
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navLinks.classList.remove("show");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = '<i class="bi bi-list"></i>';
+
+      });
+
+    });
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
-
 </html>
